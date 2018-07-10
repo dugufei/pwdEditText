@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="PwdEditText">
+    <attr format="string" name="pwd_hint_txt"/>
+    <attr format="dimension" name="pwd_txt_size"/>
+    <attr format="color" name="pwd_hint_color"/>
+    <attr format="color" name="pwd_txt_color"/>
+  </declare-styleable>
+</resources>

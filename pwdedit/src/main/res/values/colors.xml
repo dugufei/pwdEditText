@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="pwd_strength_weak">#FF6555</color>
+  <color name="pwd_strength_middle">#EE6F00</color>
+  <color name="pwd_strength_strong">#07C18A</color>
+</resources>

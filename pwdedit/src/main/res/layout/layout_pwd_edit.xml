@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+  <EditText
+      android:id="@+id/et_pwdEdit"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="8dp"
+      android:layout_marginRight="8dp"
+      android:background="@android:color/transparent"
+      android:inputType="textPassword"
+      android:maxLines="1"
+      android:minWidth="100dp"
+      android:singleLine="true"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/iv_pwd_clear"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      />
+
+  <ImageView
+      android:id="@+id/iv_pwd_clear"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="8dp"
+      android:layout_marginEnd="8dp"
+      android:layout_marginRight="8dp"
+      android:layout_marginTop="8dp"
+      android:padding="4dp"
+      android:src="@drawable/ic_clear"
+      android:visibility="invisible"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/iv_pwd_visiable"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:visibility="visible"
+      />
+
+  <ImageView
+      android:id="@+id/iv_pwd_visiable"
+      android:layout_width="wrap_content"
+      android:layout_height="0dp"
+      android:layout_marginEnd="8dp"
+      android:layout_marginRight="8dp"
+      android:scaleType="center"
+      android:src="@drawable/ic_password_visible"
+      android:visibility="invisible"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/tv_pwd_strength"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.5"
+      tools:visibility="visible"
+      />
+  <TextView
+      android:id="@+id/tv_pwd_strength"
+      android:layout_width="wrap_content"
+      android:layout_height="0dp"
+      android:gravity="center"
+      android:paddingLeft="3dp"
+      android:paddingRight="3dp"
+      android:text="弱"
+      android:textColor="@android:color/white"
+      android:textSize="10sp"
+      android:visibility="invisible"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.0"
+      tools:visibility="visible"
+      />
+
+</android.support.constraint.ConstraintLayout>

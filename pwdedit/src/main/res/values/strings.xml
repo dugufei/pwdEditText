@@ -1,0 +1,7 @@
+<resources>
+  <string name="app_name">PwdEdit</string>
+
+  <string name="pwd_strength_weak_tip">弱</string>
+  <string name="pwd_strength_middle_tip">中</string>
+  <string name="pwd_strength_strong_tip">强</string>
+</resources>
