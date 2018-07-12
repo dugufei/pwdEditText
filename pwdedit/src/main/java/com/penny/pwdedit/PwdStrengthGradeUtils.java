@@ -40,8 +40,10 @@ public class PwdStrengthGradeUtils {
               + (length - 8) * 4 + calRepeatCharSize(pwd)
               + calSeriaAlphaSize(pwd)
               + calSeriaNumSize(pwd)
-              + calContinuesAlpha(pwd)
-              + calContinuesNum(pwd)
+              + calContinuesAlpha(pwd,true)
+              + calContinuesAlpha(pwd,false)
+              + calContinuesNum(pwd,true)
+              + calContinuesNum(pwd,false)
               + upperSize * lowerSize * 2;
 
       Log.d(TAG, "  ");
@@ -57,9 +59,13 @@ public class PwdStrengthGradeUtils {
           + " + "
           + calSeriaNumSize(pwd)
           + " + "
-          + calContinuesAlpha(pwd)
+          + calContinuesAlpha(pwd,true)
           + " + "
-          + calContinuesNum(pwd)
+          + calContinuesAlpha(pwd,false)
+          + " + "
+          + calContinuesNum(pwd,true)
+          + " + "
+          + calContinuesNum(pwd,false)
           + " + "
           + upperSize * lowerSize * 2);
       Log.d(TAG,"result = "+result);
@@ -152,16 +158,17 @@ public class PwdStrengthGradeUtils {
   }
 
   // 3个以上的连续字母
-  private static int calContinuesAlpha(String pwd) {
+  private static int calContinuesAlpha(String pwd,boolean isAsc) {
     int result = 0;
     int count = 0;
+    int abs = isAsc ? 1:-1;
     for (int i = 0; i < pwd.length() - 2; i++) {
       int offset = 0;
       for (int j = i + 1; j < pwd.length(); j++) {
         if (isAlpha(pwd.charAt(j - 1))
             && isAlpha(pwd.charAt(j + 1))
-            && pwd.charAt(j) - pwd.charAt(j - 1) == 1
-            && pwd.charAt(j + 1) - pwd.charAt(j) == 1) {
+            && pwd.charAt(j) - pwd.charAt(j - 1) == abs
+            && pwd.charAt(j + 1) - pwd.charAt(j) == abs) {
           offset++;
           if (j == pwd.length() - 2) {
             count++;
@@ -184,16 +191,17 @@ public class PwdStrengthGradeUtils {
   }
 
   // 3个以上的连续数字
-  private static int calContinuesNum(String pwd) {
+  private static int calContinuesNum(String pwd,boolean isAsc) {
     int result = 0;
     int count = 0;
+    int abs = isAsc ? 1:-1;
     for (int i = 0; i < pwd.length() - 2; i++) {
       int offset = 0;
       for (int j = i + 1; j < pwd.length(); j++) {
         if (isNum(pwd.charAt(j - 1))
             && isNum(pwd.charAt(j + 1))
-            && pwd.charAt(j) - pwd.charAt(j - 1) == 1
-            && pwd.charAt(j + 1) - pwd.charAt(j) == 1) {
+            && pwd.charAt(j) - pwd.charAt(j - 1) == abs
+            && pwd.charAt(j + 1) - pwd.charAt(j) == abs) {
           offset++;
           if (j == pwd.length() - 2) {
             count++;
