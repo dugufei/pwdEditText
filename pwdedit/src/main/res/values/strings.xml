@@ -4,4 +4,8 @@
   <string name="pwd_strength_weak_tip">弱</string>
   <string name="pwd_strength_middle_tip">中</string>
   <string name="pwd_strength_strong_tip">强</string>
+
+  <string name="allow_input_character">
+    0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+  </string>
 </resources>

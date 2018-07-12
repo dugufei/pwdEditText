@@ -9,6 +9,7 @@ public class PwdStrengthGradeUtils {
   private static final int MIDDLE_GRADE = 80;
   private static final int BASE_GRADE = 70;
 
+  public static final int WEEK_NONE = 0;
   public static final int WEEK_LEVEL = 1;
   public static final int MIDDLE_LEVEL = 2;
   public static final int STRONG_LEVEL = 3;
@@ -64,7 +65,9 @@ public class PwdStrengthGradeUtils {
       Log.d(TAG,"result = "+result);
     }
 
-    if (result < WEEK_GRADE || numSize<2) {
+    if(pwd.length()<1){
+      return WEEK_NONE;
+    } else if (result < WEEK_GRADE || numSize<2) {
       return WEEK_LEVEL;
     } else if (result < MIDDLE_GRADE) {
       return MIDDLE_LEVEL;

@@ -176,6 +176,7 @@ public class PwdEditText extends ConstraintLayout implements TextWatcher {
         pwdStrentghTv.setBackgroundResource(R.drawable.bg_pwd_strong);
         pwdStrentghTv.setVisibility(View.VISIBLE);
         break;
+      case PwdStrengthGradeUtils.WEEK_NONE:
       default:
         pwdStrentghTv.setVisibility(View.INVISIBLE);
         break;

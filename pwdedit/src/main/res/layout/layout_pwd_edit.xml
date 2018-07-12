@@ -14,6 +14,7 @@
       android:layout_marginEnd="8dp"
       android:layout_marginRight="8dp"
       android:background="@android:color/transparent"
+      android:digits="@string/allow_input_character"
       android:inputType="textPassword"
       android:maxLines="1"
       android:minWidth="100dp"
