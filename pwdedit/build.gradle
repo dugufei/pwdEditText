@@ -29,7 +29,7 @@ publish {
   userOrg = 'dugufei' //bintray.com你的用户名
   groupId = 'com.penny.pwdEdit' //jcenter上的路径
   artifactId = 'pwdEdit' //项目名称
-  publishVersion = '1.0.0' //版本号
+  publishVersion = '1.0.1' //版本号
   desc = 'a custome password EditText with password stregth & visiable'
   website = 'https://github.com/dugufei/pwdEditText'
 }

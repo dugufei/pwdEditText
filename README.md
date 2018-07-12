@@ -1,10 +1,11 @@
 # pwdEditText
 
-Login password has the mix of  numbers and  characters, at least 8 digits. There are 70 points for meeting the basic password rule. The rule of adding and substracting points is as follows:
- 登录密码至少8位，数字、字母混合。符合密码基本规则者为70分，加减分规则如下：
+Login password has the mix of  numbers and  characters, at least 8 digits. There are 70 points for meeting the basic password rule.
+The rule of adding and substracting points is as follows:
+ 密码至少8位，数字、字母混合, 且数字至少2位. 符合密码基本规则者为70分，加减分规则如下：
 
 • ＋(总字母数－8) × 4                                      
-• ＋(total digits －8) × 4    
+• ＋(total digits －8) × 4
 例如，12位密码，可加16分                                  
 for example, 12 digits password, add 16 points
 
